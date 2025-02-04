@@ -1,0 +1,9 @@
+General notes:
+
+* The files are submitted correctly.
+
+Makefile:
+
+* Functions as intended.
+
+Grade: 100
