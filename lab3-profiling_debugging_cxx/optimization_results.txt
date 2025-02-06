@@ -1,0 +1,10 @@
+-O0 original: Result from computation = 249902, Total run time = 2.98785
+-O0 hand-optimized: Result from computation = 249902, Total run time = 1.9879
+-O2 original: Result from computation = 249902, Total run time = 0.83996
+-O2 hand-optimized: Result from computation = 249902, Total run time = 0.223973
+
+Hand optimization and compiler optimization both improve performance, with -O2 
+providing a significant speedup over -O0. The best performance is achieved with
+-O2 and hand-optimization, reducing runtime to 0.223973s. Overall, hand-optimized
+code is always faster than the original, and -O2 is always faster than -O0.
+
