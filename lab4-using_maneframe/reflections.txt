@@ -1,0 +1,4 @@
+
+A. Observing the error values, as the number of subintervals (n) increased by a factor of 10 each time, the relative error decreased by 10^2. It is approximately scales as O(𝑛^(-2)), suggesting that the approximation method has (p = -2). 
+
+B. Examining the total runtime, it is approximately scales as O(n), indicating that the algorithm has linear complexity (q = 1).

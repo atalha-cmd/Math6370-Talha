@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -J ex2_talha               # job name to display in squeue
+#SBATCH -A reynolds_math6370_1252_001c_0001
+#SBATCH -o ex2_out.txt             # standard output file
+#SBATCH -e ex2_err.txt             # standard error file
+#SBATCH -p dev                     # requested partition
+#SBATCH -t 2                       # maximum runtime in minutes
+#SBATCH --mem=10G                  # memory in GB
+#SBATCH --mail-user atalha@smu.edu
+#SBATCH --mail-type=all
+
+
+module load python
+
+python myjob.py 10
+python myjob.py 100
+python myjob.py 1000
+python myjob.py 10000 
+python myjob.py 100000
+python myjob.py 1000000
+python myjob.py 10000000
