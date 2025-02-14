@@ -1,0 +1,10 @@
+General (turned in correctly):
+* submitted according to lab instructions
+
+Optimization (code and commentary):
+* Correct optimizations, and accurate conclusions.
+
+Debugging:
+* Correct debugging -- runs and gives the correct solution.
+
+Grade: 100
