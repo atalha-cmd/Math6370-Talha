@@ -1,0 +1,14 @@
+size in (m,n)	        Process time of vec2d	        Process time of vec2d_b
+-------------------------------------------------------------------------------
+(10000,1000)		0.198297			0.184476
+(1000,10000)		0.207064			0.17838599999999999
+(100,100000)		0.19372600000000001		0.17908199999999999
+(10,1000000)		0.19143499999999999		0.178567
+(100000,100)		0.19923099999999999		0.17840300000000001
+(1000000,10)		0.245393			0.17823
+
+********************************************************************************
+
+Comments:
+---------
+The performance difference is due to memory layout and cache efficiency. A 1D vector (vect_2d_b) is stored data in a continuous block, allowing for faster and more efficient access. In contrast, a 2D matrix (vect_2d) involves additional indexing overhead and less efficient memory access, which can lead to cache misses and slower processing.
