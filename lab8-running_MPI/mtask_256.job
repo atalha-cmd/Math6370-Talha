@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -A reynolds_math6370_1252_001c_0001    # account name
+#SBATCH -J mpi_task_256                        # job name
+#SBATCH -o output_maneframe_256.txt            # output file
+#SBATCH -e error_task_256.txt                  # error file
+#SBATCH -N 4                   # total requested node
+#SBATCH -n 256                 # total requested MPI tasks
+#SBATCH --ntasks-per-node=64   # maximum task load per node 
+#SBATCH -p standard-s          # requested queue
+#SBATCH -t 00:01:00            # total time requested <hh:mm:ss>
+#SBATCH --exclusive            # do not share the node with other users
+#SBATCH --mail-user atalha@smu.edu
+#SBATCH --mail-type=all
+
+# load the modules that we need and run
+
+module load gcc/11.2.0 openmpi
+
+srun ./driver.exe

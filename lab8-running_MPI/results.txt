@@ -1,0 +1,15 @@
+File name		Number of tasks		Run time
+---------------------------------------------------------		
+output_maneframe_1.txt		1		0.034525666	
+output_maneframe_2.txt		2		0.018042474
+output_maneframe_4.txt		4		0.009945831
+output_maneframe_8.txt		8		0.004755035
+output_maneframe_16.txt		16		0.002520650
+output_maneframe_32.txt		32		0.001994912	
+output_maneframe_64.txt		64		0.008860092
+output_maneframe_128a.txt	128 (4 nodes)	0.000767684	
+output_maneframe_128b.txt	128 (2 nodes)	0.076887885	
+output_maneframe_256.txt	256		0.088805858
+
+From 1 to 32 tasks, execution time decreases consistently, but improvements plateau after 64 tasks. For 128 tasks, the runtime on 4 nodes is 0.0008s, whereas on 2 nodes, it increases significantly to 0.0769s. This suggests potential inter-node communication overhead, likely caused by limited resources per node.
+
