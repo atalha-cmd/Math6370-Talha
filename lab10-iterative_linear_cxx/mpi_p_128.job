@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -A reynolds_math6370_1252_001c_0001    # account name
+#SBATCH -J mpi_p_128                           # job name
+#SBATCH -o output_processes_128.txt            # output file
+#SBATCH -e error_p_128.txt                     # error file
+#SBATCH -N 2                   # total requested node
+#SBATCH -n 128                 # total requested MPI tasks
+#SBATCH --ntasks-per-node=64   # maximum task load per node 
+#SBATCH -p standard-s          # requested queue
+#SBATCH -t 00:05:00            # total time requested <hh:mm:ss>
+#SBATCH --exclusive            # do not share the node with other users
+#SBATCH --mail-user atalha@smu.edu
+#SBATCH --mail-type=all
+
+# load the modules that we need and run
+
+module load gcc/11.2.0 openmpi
+
+srun ./driver_mpi.exe
+
+srun ./driver_mpi_async.exe
