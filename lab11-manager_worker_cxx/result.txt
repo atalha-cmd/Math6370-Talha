@@ -1,0 +1,17 @@
+
+
+Num processes   Runtime        Parallel Speedup
+------------------------------------------------
+2               0.3383900       1.000000000
+3               0.1690950       2.001182767
+5		0.0866223	3.906499827
+9		0.0458883	7.374210855
+17		0.0302389	11.19055257
+37		0.0198750	17.02591195
+65		0.0190287	17.78313810
+
+The program hangs when executed with a single processor. 
+This occurs because the manager attempts to distribute 
+initial tasks to non-existent worker processes, which 
+never receive any assignments. Meanwhile, the manager 
+waits indefinitely for results that are never returned. 
