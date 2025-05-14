@@ -1,3 +1,2 @@
-# Math6370-Talha
-
-This repository contains the implementation and work for the Math 6370 course, developed by Abu Talha.
+#Math6370-Talha
+Welcome to the Math6370-Talha repository! This repository contains the implementation and coursework for the Parallel Scientific Computing course. All work has been developed by Abu Talha.
